@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+</head>
+<body>
+	<h1>Resgister</h1>
+	<form>
+		<!-- enter name -->
+		<label for="firstname">First Name</label>
+		<input id="firstname" type="text" name="firstname" placeholder="First Name" required>
+		<label for="lastname">Last Name</label>
+		<input id="lastname" type="text" name="lastname" placeholder="Last Name" required>
+
+		<br>
+    
+        <!-- enter gender -->
+		<label for="male">Male</label>
+		<input id="male" type="radio" name="gender" value="male">
+		<label for="female">Female</label>
+		<input id="female" type="radio" name="gender" value="female">
+		<label for="other">Other</label>
+		<input id="other" type="radio" name="gender" value="other">
+
+		<br>
+	
+
+	<!-- enter email -->
+	
+		<label for="email">Email</label>
+		<input id="email" type="email" name="email" required>
+		<label for="pswd">Password</label>
+		<input id="pswd" type="password" name="password" minlength="5" maxlength="10" required>
+
+		<br>
+	
+
+	<!-- enter bday -->
+
+	
+		<label >Birthday:</label>
+		<select name="month">
+			<option>Month</option>
+			<option>January</option>
+			<option>February</option>
+			<option>March</option>
+			<option>April</option>
+			
+		</select>
+
+		<select name="day">
+			<option>Day</option>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+		</select>
+
+		<select name="year">
+			<option>Year</option>
+			<option>2000</option>
+			<option>2001</option>
+			<option>2002</option>
+		</select>
+
+		<p>I agree to the terms and conditions <input type="checkbox" name="terms"></p>
+
+
+		<br>
+
+		<button>Submit</button>
+	</form>
+
+	
+
+</body>
+</html>

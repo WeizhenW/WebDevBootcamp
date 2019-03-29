@@ -1,0 +1,21 @@
+img {
+	width: 30%;
+	float: left;
+	margin: 1.66%;
+	border-radius: 8px;
+
+}
+
+.pagetitle {
+	font-family: 'Germania One', cursive;
+	font-size:40px;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin-left:1.66%;
+	border-bottom: 2px solid #f1f1f1;
+	width: 50%;
+	padding-bottom: 20px;
+}
+
+
+

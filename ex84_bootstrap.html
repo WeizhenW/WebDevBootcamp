@@ -5,6 +5,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="ex84_bootstrap.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
 
 </head>
 <body>
@@ -23,7 +26,7 @@
 				</button>
 				<!-- create home image button with glyphicon -->
 				<a class="navbar-brand" href="#">
-					<span class="glyphicon glyphicon-picture">IMG</span>
+					<span class="glyphicon glyphicon-picture"></span>IMG
 				</a>
 			</div>
 
@@ -45,36 +48,75 @@
 		
 	</nav>
 
+	<!-- create the jumbotron inside the container-->
+
+	<div class="container">
+	<div class="jumbotron">
+		<h1><span class="glyphicon glyphicon-camera" aria-hidden="true"></span><span> The Image Gallery</span></h1>
+		<p>A collection of all the beautiful images</p>
+	</div>
+
+	<!-- create the image grid -->
+	
+
 	<div class="row">
-		<div class="col-lg-1"></div>
-		<div class="col-lg-10">
-			<div class="jumbotron">
-				<div class="container sitename">
-					<h1><span class="glyphicon glyphicon-camera" aria-hidden="true"> The Image Gallery</span></h1>
-					<h4>A collection of all the beautiful images</h4>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-lg-4"><img src="https://images.unsplash.com/photo-1553082662-5f1a1f3cc83b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80"></div>
-				<div class="col-lg-4"><img src="https://images.unsplash.com/photo-1553548146-50f0bdf09f0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80"></div>
-				<div class="col-lg-4"><img src="https://images.unsplash.com/photo-1553075712-453f7213c24f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"></div>
-			</div>
-
-			<div class="row">
-				<div class="col-lg-4"><img src="https://images.unsplash.com/photo-1553173385-682bfe958d31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"></div>
-				<div class="col-lg-4"><img src="https://images.unsplash.com/photo-1553080478-b70267c283c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=382&q=80"></div>
-				<div class="col-lg-4"><img src="https://images.unsplash.com/photo-1550795658-d7d23cfaf9ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80"></div>
-			</div>
-
-			<div class="row">
-				<div class="col-lg-4"><img src="https://images.unsplash.com/photo-1550631392-26e6823af219?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80"></div>
-				<div class="col-lg-4"><img src="https://images.unsplash.com/photo-1550639264-38c3059c4620?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"></div>
-				<div class="col-lg-4"><img src="https://images.unsplash.com/photo-1549778003-d6c640bf6141?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"></div>
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<img src="https://images.unsplash.com/photo-1553082662-5f1a1f3cc83b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80">
 			</div>
 		</div>
-		<div class="col-lg-1"></div>
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<img src="https://images.unsplash.com/photo-1553548146-50f0bdf09f0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80">
+			</div>
+		</div>
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<<img src="https://images.unsplash.com/photo-1553075712-453f7213c24f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80">
+			</div>
+			</div>	
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<img src="https://images.unsplash.com/photo-1553173385-682bfe958d31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80">
+			</div>
+		</div>
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<img src="https://images.unsplash.com/photo-1553080478-b70267c283c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=382&q=80">
+			</div>
+		</div>
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<img src="https://images.unsplash.com/photo-1550795658-d7d23cfaf9ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80">
+			</div>
+		</div>
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<img src="https://images.unsplash.com/photo-1550631392-26e6823af219?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80">
+			</div>
+		</div>
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<img src="https://images.unsplash.com/photo-1550639264-38c3059c4620?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80">
+			</div>
+		</div>
+		<div class="col-lg-4 col-sm-6">
+			<div class="thumbnail">
+				<img src="https://images.unsplash.com/photo-1549778003-d6c640bf6141?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80">
+			</div>
+		</div>
+		
 	</div>
+
+	
+
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 	
 </body>
 </html>

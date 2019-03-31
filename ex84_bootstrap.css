@@ -1,0 +1,14 @@
+.row img {
+	
+	max-width:320px;
+	max-height:180px;
+	width: 98%;
+	margin: 10px 1%;
+	float: left;
+
+}
+
+.jumbotron {
+	font-family: 'Open Sans', sans-serif;
+	color:#4f5359;
+}

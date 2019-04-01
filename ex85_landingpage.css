@@ -4,8 +4,9 @@ body {
 
 .sitename {
 	color: white;
-	margin-top: 100px;
+	padding-top: 15%;
 	text-align: center;
+	text-shadow: 0 4px 3px rgba(0,0,0,0.4)
 }
 
 hr {
@@ -14,4 +15,8 @@ hr {
 
 h1 {
 	font-size: 75px;
+}
+
+html {
+	height: 100%;
 }

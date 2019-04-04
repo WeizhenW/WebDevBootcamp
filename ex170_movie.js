@@ -23,9 +23,9 @@ var movieDatabase = [
 
 movieDatabase.forEach(function(movie) {
   if(movie.watched) {
-    console.log("You have watched " + movie.title + " - " + movie.star + " stars");
+    console.log("You have watched " + "\"" + movie.title + "\"" + " - " + movie.star + " stars");
   }
   else {
-    console.log("You have not watched " + movie.title + " - " + movie.star + " stars");
+    console.log("You have not watched " + "\"" + movie.title + "\"" + " - " + movie.star + " stars");
   }
 })

@@ -20,3 +20,13 @@ function sumArray(inputArray){
   })
   return total;
 }
+
+function max(inputArray){
+  var maxNum = 0;
+  for(i = 0; i < inputArray.length; i++){
+    if(inputArray[i] > maxNum){
+      maxNum = inputArray[i];
+    }
+  }
+  return maxNum;
+}

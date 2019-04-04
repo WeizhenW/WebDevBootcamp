@@ -5,25 +5,36 @@ window.setTimeout(function() {
 
   while(input !== "quit") {
     if(input === "list") {
-      console.log("********************");
-      toDo.forEach(function(item){
-        console.log(toDo.indexOf(item) + ": " + item);
-      })
-      console.log("********************");
+      listToDos();
     }
     else if(input === "new") {
-      var newElement = prompt("Please enter the new item:");
-      toDo.push(newElement);
-      console.log(newElement + " has been added to the list");
+      addToDo();
     }
     else if(input === "delete") {
-      var delIndex = prompt ("Please enter the index to delete:");
-      toDo.splice(delIndex, 1);
-      console.log("Todo is removed");
-
+      deleteToDo();
     }
   input = prompt("What would you like to do?");
  }
-
  console.log("OK you quit the list");
 }, 500);
+
+
+function  listToDos(){
+  console.log("********************");
+  toDo.forEach(function(item, i){
+    console.log(i + ": " + item);
+  })
+  console.log("********************");
+}
+
+function addToDo(){
+  var newElement = prompt("Please enter the new item:");
+  toDo.push(newElement);
+  console.log(newElement + " has been added to the list");
+}
+
+function deleteToDo() {
+  var delIndex = prompt ("Please enter the index of todo to delete:");
+  toDo.splice(delIndex, 1);
+  console.log("Todo is removed");
+}

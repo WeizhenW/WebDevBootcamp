@@ -6,7 +6,7 @@ let score2 = document.getElementById("score2");
 let goal = document.getElementById("goal");
 let target = document.getElementById("target");
 
-// goal.innerHTML = target.innerHTML;
+
 button1.addEventListener("click", function() {
   if(Number(score1.innerHTML) < Number(goal.innerHTML) &&
   Number(score2.innerHTML) < Number(goal.innerHTML)) {
@@ -26,6 +26,9 @@ Number(score1.innerHTML) < Number(goal.innerHTML)) {
   }
 })
 
+target.addEventListener("click", function() {
+  goal.innerHTML = target.value.toString();
+})
 reset.addEventListener("click", function() {
   score1.innerHTML = "0";
   score2.innerHTML = "0";

@@ -4,25 +4,49 @@ let squares = document.querySelectorAll(".square");
 let pickedColor = pickColor();
 let colorDisplay = document.getElementById("targetColor");
 let messageDisplay = document.getElementById("message");
+let restart = document.getElementById("restart");
 
-for(let i=0; i<squares.length; i++) {
-  //initial color
-  squares[i].style.backgroundColor = colors[i];
-  //add addEventListener: when click, compare vs. pickedColor
-  //if not match, change to background color
-  squares[i].addEventListener("click", function() {
-    let clickedColor = this.style.backgroundColor;
-    if(clickedColor === pickedColor) {
-      messageDisplay.textContent = "Correct!"
-      colorChange();
-    } else {
-      this.style.backgroundColor = "#232323";
-      messageDisplay.textContent = "Please try again!"
-    }
-  })
+
+refreshColor();
+compareColor();
+
+
+restart.addEventListener("click", function() {
+  header.style.backgroundColor = "#232323";
+  colors = generateRandomColors(6);
+  pickedColor = pickColor();
+  refreshColor();
+  compareColor();
+});
+
+function refreshColor() {
+  colorDisplay.textContent = pickedColor;
+
+  for(let i=0; i<squares.length; i++) {
+    squares[i].style.backgroundColor = colors[i];
+  }
+  // console.log(colors);
 }
 
-colorDisplay.textContent = pickedColor;
+
+function compareColor() {
+  for(let i=0; i<squares.length; i++) {
+    // squares[i].style.backgroundColor = colors[i];
+    //add addEventListener: when click, compare vs. pickedColor
+    //if not match, change to background color
+    squares[i].addEventListener("click", function() {
+      let clickedColor = this.style.backgroundColor;
+      if(clickedColor === pickedColor) {
+        messageDisplay.textContent = "Correct!"
+        colorChange();
+      } else {
+        this.style.backgroundColor = "#232323";
+        messageDisplay.textContent = "Please try again!"
+      }
+    })
+  }
+}
+
 
 function colorChange() {
   for(let i=0; i<squares.length; i++) {
@@ -44,8 +68,9 @@ function generateRandomColors(num) {
     let j = Math.floor(Math.random() * 255);
     let b = Math.floor(Math.random() * 255);
     let newColor = "rgb(" + r + ", " + j + ", " + b + ")";
-    console.log(newColor);
+    // console.log(newColor);
     colorArray.push(newColor);
     }
+  console.log("colorArray:", colorArray);
   return colorArray;
   }

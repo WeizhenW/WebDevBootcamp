@@ -1,11 +1,4 @@
-let colors = [
-  "rgb(255, 0, 0)",
-  "rgb(255, 255, 0)",
-  "rgb(0, 255, 0)",
-  "rgb(0, 255, 255)",
-  "rgb(255, 0, 255)",
-  "rgb(0, 0, 255)"
-]
+let colors = generateRandomColors(6);
 let header = document.querySelector(".header");
 let squares = document.querySelectorAll(".square");
 let pickedColor = pickColor();
@@ -19,12 +12,12 @@ for(let i=0; i<squares.length; i++) {
   //if not match, change to background color
   squares[i].addEventListener("click", function() {
     let clickedColor = this.style.backgroundColor;
-    if(clickedColor !== pickedColor) {
-      this.style.backgroundColor = "#232323";
-      messageDisplay.textContent = "Please try again!"
-    } else {
+    if(clickedColor === pickedColor) {
       messageDisplay.textContent = "Correct!"
       colorChange();
+    } else {
+      this.style.backgroundColor = "#232323";
+      messageDisplay.textContent = "Please try again!"
     }
   })
 }
@@ -43,3 +36,16 @@ function pickColor() {
   let indexColor = Math.floor(Math.random() * colors.length); //easy vs. hard mode
   return colors[indexColor];
 }
+
+function generateRandomColors(num) {
+  let colorArray = [];
+  for(let i=0; i<num; i++) {
+    let r = Math.floor(Math.random() * 255);
+    let j = Math.floor(Math.random() * 255);
+    let b = Math.floor(Math.random() * 255);
+    let newColor = "rgb(" + r + ", " + j + ", " + b + ")";
+    console.log(newColor);
+    colorArray.push(newColor);
+    }
+  return colorArray;
+  }

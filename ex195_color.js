@@ -1,19 +1,44 @@
-let colors = generateRandomColors(6);
+let numOfColors = 6;
+let colors = generateRandomColors(numOfColors);
+let secondRow = document.querySelectorAll(".second");//the second row of the squares
 let header = document.querySelector(".header");
 let squares = document.querySelectorAll(".square");
 let pickedColor = pickColor();
 let colorDisplay = document.getElementById("targetColor");
 let messageDisplay = document.getElementById("message");
 let restart = document.getElementById("restart");
+let easyButton = document.getElementById("easyButton");
+let hardButton = document.getElementById("hardButton");
 
-
+//the first display of the colors
 refreshColor();
 compareColor();
 
-
+//if easy clicked, only 3 colors
+easyButton.addEventListener("click", function() {
+  header.style.backgroundColor = "#232323";
+  for(let i=0; i<secondRow.length;i++) {
+    secondRow[i].style.backgroundColor = "#232323";
+  }
+  numOfColors = 3;
+  colors = generateRandomColors(numOfColors);
+  pickedColor = pickColor();
+  refreshColor();
+  compareColor();
+})
+//if hard clicked, all 6 colors
+hardButton.addEventListener("click", function() {
+  header.style.backgroundColor = "#232323";
+  numOfColors = 6;
+  colors = generateRandomColors(numOfColors);
+  pickedColor = pickColor();
+  refreshColor();
+  compareColor();
+})
+//change new colors
 restart.addEventListener("click", function() {
   header.style.backgroundColor = "#232323";
-  colors = generateRandomColors(6);
+  colors = generateRandomColors(numOfColors);
   pickedColor = pickColor();
   refreshColor();
   compareColor();
@@ -21,8 +46,9 @@ restart.addEventListener("click", function() {
 
 function refreshColor() {
   colorDisplay.textContent = pickedColor;
+  restart.textContent = "NEW COLORS";
 
-  for(let i=0; i<squares.length; i++) {
+  for(let i=0; i<colors.length; i++) {
     squares[i].style.backgroundColor = colors[i];
   }
   // console.log(colors);
@@ -30,7 +56,7 @@ function refreshColor() {
 
 
 function compareColor() {
-  for(let i=0; i<squares.length; i++) {
+  for(let i=0; i<colors.length; i++) {
     // squares[i].style.backgroundColor = colors[i];
     //add addEventListener: when click, compare vs. pickedColor
     //if not match, change to background color
@@ -39,6 +65,7 @@ function compareColor() {
       if(clickedColor === pickedColor) {
         messageDisplay.textContent = "Correct!"
         colorChange();
+        restart.textContent = "PLAY AGAIN?";
       } else {
         this.style.backgroundColor = "#232323";
         messageDisplay.textContent = "Please try again!"
@@ -47,9 +74,8 @@ function compareColor() {
   }
 }
 
-
 function colorChange() {
-  for(let i=0; i<squares.length; i++) {
+  for(let i=0; i<colors.length; i++) {
     squares[i].style.backgroundColor = pickedColor;
   }
   header.style.backgroundColor = pickedColor;

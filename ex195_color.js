@@ -1,6 +1,6 @@
 let numOfColors = 6;
 let colors = generateRandomColors(numOfColors);
-let secondRow = document.querySelectorAll(".second");//the second row of the squares
+let secondRow = document.querySelectorAll(".second");//select the second row of the squares
 let header = document.querySelector(".header");
 let squares = document.querySelectorAll(".square");
 let pickedColor = pickColor();
@@ -19,7 +19,8 @@ easyButton.addEventListener("click", function() {
   header.style.backgroundColor = "#232323";
   for(let i=0; i<secondRow.length;i++) {
     secondRow[i].style.backgroundColor = "#232323";
-  }
+  } //the returned value of secondRow is an array;
+  //go through each element of this array to apply the background color (hide the second row effect)
   numOfColors = 3;
   colors = generateRandomColors(numOfColors);
   pickedColor = pickColor();
@@ -35,15 +36,17 @@ hardButton.addEventListener("click", function() {
   refreshColor();
   compareColor();
 })
-//change new colors
+//refresh to get new colors
 restart.addEventListener("click", function() {
   header.style.backgroundColor = "#232323";
   colors = generateRandomColors(numOfColors);
+  //use the previous value of the numOfColors => easy or hard defined
   pickedColor = pickColor();
   refreshColor();
   compareColor();
 });
 
+//function to refresh the page to get new colors
 function refreshColor() {
   colorDisplay.textContent = pickedColor;
   restart.textContent = "NEW COLORS";
@@ -54,7 +57,7 @@ function refreshColor() {
   // console.log(colors);
 }
 
-
+//function to compare if the clicked color matches the picked color
 function compareColor() {
   for(let i=0; i<colors.length; i++) {
     // squares[i].style.backgroundColor = colors[i];
@@ -81,12 +84,12 @@ function colorChange() {
   header.style.backgroundColor = pickedColor;
 
 }
-
+//function to set a random picked color
 function pickColor() {
   let indexColor = Math.floor(Math.random() * colors.length); //easy vs. hard mode
   return colors[indexColor];
 }
-
+//function to generate all the candidate colors
 function generateRandomColors(num) {
   let colorArray = [];
   for(let i=0; i<num; i++) {

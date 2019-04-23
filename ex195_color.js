@@ -16,9 +16,10 @@ compareColor();
 
 //if easy clicked, only 3 colors
 easyButton.addEventListener("click", function() {
-  header.style.backgroundColor = "#232323";
+  this.classList.add("selected");
+  hardButton.classList.remove("selected");
   for(let i=0; i<secondRow.length;i++) {
-    secondRow[i].style.backgroundColor = "#232323";
+    secondRow[i].style.display = "none";
   } //the returned value of secondRow is an array;
   //go through each element of this array to apply the background color (hide the second row effect)
   numOfColors = 3;
@@ -29,7 +30,11 @@ easyButton.addEventListener("click", function() {
 })
 //if hard clicked, all 6 colors
 hardButton.addEventListener("click", function() {
-  header.style.backgroundColor = "#232323";
+  this.classList.add("selected");
+  easyButton.classList.remove("selected");
+  for(let i=0; i<secondRow.length;i++) {
+    secondRow[i].style.display = "block";
+  }
   numOfColors = 6;
   colors = generateRandomColors(numOfColors);
   pickedColor = pickColor();
@@ -38,7 +43,7 @@ hardButton.addEventListener("click", function() {
 })
 //refresh to get new colors
 restart.addEventListener("click", function() {
-  header.style.backgroundColor = "#232323";
+  header.style.backgroundColor = "steelblue";
   colors = generateRandomColors(numOfColors);
   //use the previous value of the numOfColors => easy or hard defined
   pickedColor = pickColor();
@@ -50,6 +55,7 @@ restart.addEventListener("click", function() {
 function refreshColor() {
   colorDisplay.textContent = pickedColor;
   restart.textContent = "NEW COLORS";
+  message.textContent = "Click a color";
 
   for(let i=0; i<colors.length; i++) {
     squares[i].style.backgroundColor = colors[i];

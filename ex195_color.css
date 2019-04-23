@@ -1,23 +1,40 @@
 body {
   background-color: #232323;
   color: white;
+  margin: 0;
+  font-family: "Montserrat", "Avenir";
 
 }
-.header {
+h1 {
   text-align: center;
+  background: steelblue;
+  line-height: 1.1;
+  margin: 0;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 20px 0;
 }
 
+#targetColor {
+  font-size: 200%;
+}
 
 .messageBox {
   background-color: white;
   text-align: center;
-  color: blue;
+  color: black;
   font-weight: bold;
+  height: 30px;
+}
+
+#message {
+  display: inline-block;
+  width: 20%;
 }
 
 .colorTable {
   max-width: 600px;
-  margin:0 auto;
+  margin:20px auto;
 }
 
 .square {
@@ -27,4 +44,28 @@ body {
   float: left;
   border-radius: 25%;
   background: purple;
+  transition: background 0.5s;
+}
+
+.selected {
+  background: steelblue;
+  color: white;
+}
+
+button {
+  border: none;
+  background: none;
+  color: steelblue;
+  text-transform: uppercase;
+  height: 100%;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: inherit;
+  transition: all 0.3s;
+  outline: none;
+}
+
+button:hover {
+  color: white;
+  background: steelblue;
 }

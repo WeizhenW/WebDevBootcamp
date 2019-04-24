@@ -1,0 +1,47 @@
+
+body {
+  background-image: linear-gradient(to right, #60c4bc, #e0ef88);
+}
+
+.todoTable {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-top: 100px;
+  max-width: 300px;
+  background: white;
+  color: gray;
+}
+
+h1 {
+  margin: 0;
+  background: #4289f4;
+  color: white;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+#plusSign {
+  text-align: right;
+}
+
+input {
+  font-size: 20px;
+  width: 295px;
+  margin-top: 0;
+}
+
+li {
+  font-size: 20px;
+  height: 50px;
+  list-style-type: none;
+
+}
+
+.crossOver {
+  text-decoration:line-through;
+}
+
+.fa-trash-alt {
+  /* visibility: hidden; */
+}

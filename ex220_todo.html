@@ -9,23 +9,27 @@
       crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="ex220_todo.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
+
   <body>
     <div class="todoTable">
-        <h1>To Do List <span><i id="plusSign" class="fas fa-plus"></i></span></h1>
+        <h1 id="title">To-Do List<span><i id="plusSign" class="fas fa-plus"></i></span></h1>
 
-      <div class="inputBox">
-        <input type="text" id="todoInput" placeholder="Add New Todo">
-      </div>
+        <div class="inputBox">
+          <input type="text" id="todoInput" placeholder="Add New Todo">
+        </div>
 
       <div class="todos">
         <ul>
-          <li><i class="fas fa-trash-alt"></i>Shopping</li>
-          <li><i class="fas fa-trash-alt"></i>Cooking</li>
-          <li><i class="fas fa-trash-alt"></i>Cleaning</li>
-          <li><i class="fas fa-trash-alt"></i>Dish washing</li>
-          <li><i class="fas fa-trash-alt"></i>Doing Laundry</li>
+          <li><span class="trash"><i class="fas fa-trash-alt"></i></span><span id="item">Shopping</span></li>
+          <li><span class="trash"><i class="fas fa-trash-alt"></i></span><span id="item">Eating</span></li>
+          <li><span class="trash"><i class="fas fa-trash-alt"></i></span><span id="item">Cleaning</span></li>
+          <li><span class="trash"><i class="fas fa-trash-alt"></i></span><span id="item">Washing</span></li>
+          <li><span class="trash"><i class="fas fa-trash-alt"></i></span><span id="item">Sleeping</span></li>
+
+
         </ul>
 
       </div>
